@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Contact from '../components/Contact.astro';
+import WhatsAppButton from '../components/WhatsAppButton';
+import SocialSidebar from '../components/SocialSidebar';
+
+const seo = {
+  title: "Clientes Felices | StarDogs Colombia",
+  description: "Conoce las experiencias de nuestros clientes con sus cachorros Dachshund. Historias reales de familias felices que han confiado en nosotros."
+};
+---
+
+<Layout title={seo.title} description={seo.description}>
+  <Navbar />
+  <main class="happy-clients">
+    <section class="happy-clients__hero">
+      <h1>Clientes Felices</h1>
+      <p>Historias reales de familias que han encontrado su compañero perfecto con nosotros</p>
+    </section>
+    
+    <section class="testimonials-grid">
+      <div class="testimonials-grid__container">
+        <article class="testimonial-card">
+          <img src="https://instagram.feoh8-1.fna.fbcdn.net/v/t51.29350-15/462068032_468240369593929_1888893505710871406_n.webp?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE2ODMuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.feoh8-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=PAE-y72wBHgQ7kNvgGrN9i4&_nc_gid=005283433e8f4ad1988ee246fc2e3127&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MzQ3MTA1MTE5NjkzOTQ1ODU3Mg%3D%3D.3-ccb7-5&oh=00_AYASeuFnqXFpWfEtaHOS1ZcfhtZZY0HmNZ3bxEzRnH-IVQ&oe=676D3F9E&_nc_sid=22de04" alt="Dachshund feliz en su nuevo hogar" />
+          <div class="testimonial-card__content">
+            <p>"Nuestro pequeño es una alegría total. La experiencia con StarDogs fue excepcional desde el primer contacto."</p>
+            <cite>- Familia Martínez, Miami USA</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1612195583950-b8fd34c87093?w=400&h=300&fit=crop" alt="Dachshund Blue jugando en casa" />
+          <div class="testimonial-card__content">
+            <p>"El proceso de envío internacional fue impecable. Nuestro Blue llegó sano y feliz a su nuevo hogar."</p>
+            <cite>- Familia Wilson, Texas USA</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1647891940243-77a6483a152e?w=400&h=300&fit=crop" alt="Dachshund Chocolate con su familia" />
+          <div class="testimonial-card__content">
+            <p>"La calidad y el pedigree de nuestro cachorro son excepcionales. El seguimiento post-venta ha sido excelente."</p>
+            <cite>- Familia López, Medellín</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1519098901909-b1553a1190af?w=400&h=300&fit=crop" alt="Dachshund Dapple en el parque" />
+          <div class="testimonial-card__content">
+            <p>"Nuestro Dapple es hermoso y tiene un temperamento increíble. ¡Gracias por esta belleza!"</p>
+            <cite>- Familia García, Bogotá</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1548658166-136d9f6a7e76?w=400&h=300&fit=crop" alt="Dachshund jugando en el jardín" />
+          <div class="testimonial-card__content">
+            <p>"La documentación y el proceso de adopción fueron muy profesionales. ¡Estamos encantados!"</p>
+            <cite>- Familia Anderson, California USA</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1647891941746-fe34d126ef35?w=400&h=300&fit=crop" alt="Dachshund en su cama nueva" />
+          <div class="testimonial-card__content">
+            <p>"Un proceso transparente y profesional. Nuestro cachorro es perfecto y muy saludable."</p>
+            <cite>- Familia Ramírez, Cali</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1612195583950-b8fd34c87093?w=400&h=300&fit=crop" alt="Dachshund con su juguete favorito" />
+          <div class="testimonial-card__content">
+            <p>"La asesoría durante todo el proceso fue excelente. ¡Nuestro salchicha es una bendición!"</p>
+            <cite>- Familia Torres, Barranquilla</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?w=400&h=300&fit=crop" alt="Dachshund en su primer día en casa" />
+          <div class="testimonial-card__content">
+            <p>"El envío a USA fue perfecto y seguro. La comunicación siempre fue clara y profesional."</p>
+            <cite>- Familia Smith, New York USA</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1647891940243-77a6483a152e?w=400&h=300&fit=crop" alt="Dachshund celebrando su cumpleaños" />
+          <div class="testimonial-card__content">
+            <p>"Un año después y nuestro cachorro sigue siendo la alegría de la casa. ¡Gracias StarDogs!"</p>
+            <cite>- Familia Hernández, Ciudad de México</cite>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1519098901909-b1553a1190af?w=400&h=300&fit=crop" alt="Dachshund en su primer paseo" />
+          <div class="testimonial-card__content">
+            <p>"La calidad genética y el temperamento de nuestro cachorro son excepcionales. ¡Súper recomendados!"</p>
+            <cite>- Familia González, Panamá</cite>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <Contact />
+  </main>
+  <WhatsAppButton client:load />
+  <SocialSidebar client:load />
+</Layout>

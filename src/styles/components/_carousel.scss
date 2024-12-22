@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.carousel {
+  position: relative;
+  width: 100%;
+  
+  &__container {
+    overflow: hidden;
+  }
+  
+  &__track {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  &__slide {
+    flex: 0 0 100%;
+    
+    @include respond(md) {
+      flex: 0 0 50%;
+    }
+    
+    @include respond(lg) {
+      flex: 0 0 33.333%;
+    }
+  }
+}

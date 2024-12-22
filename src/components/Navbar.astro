@@ -1,0 +1,55 @@
+---
+import { Menu } from 'lucide-react';
+---
+
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="/" class="navbar__logo">
+      <span>StarDogs</span>
+    </a>
+    
+    <button class="navbar__toggle" aria-label="Toggle menu" id="menuToggle">
+      <Menu size={24} />
+    </button>
+
+    <div class="navbar__menu" id="menu">
+      <ul class="navbar__list">
+        <li><a href="/cachorros-disponibles">Cachorros Disponibles</a></li>
+        <li><a href="/clientes-felices">Clientes Felices</a></li>
+        <li><a href="#breed-info">Sobre la Raza</a></li>
+        <li><a href="#contact" class="button button--secondary">Contáctanos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle?.addEventListener('click', () => {
+    menu?.classList.toggle('navbar__menu--active');
+    menuToggle.setAttribute(
+      'aria-expanded',
+      menu?.classList.contains('navbar__menu--active').toString()
+    );
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menu?.contains(e.target as Node) && 
+        !menuToggle?.contains(e.target as Node) && 
+        menu?.classList.contains('navbar__menu--active')) {
+      menu.classList.remove('navbar__menu--active');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu when clicking on links
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('navbar__menu--active');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

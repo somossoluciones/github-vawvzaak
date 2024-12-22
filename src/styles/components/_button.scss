@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-3 $spacing-6;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: $font-size-base;
+  transition: all 0.2s ease;
+  
+  &--primary {
+    background-color: $primary;
+    color: $white;
+    
+    &:hover {
+      background-color: darken-color($primary, 10%);
+    }
+  }
+  
+  &--secondary {
+    background-color: $secondary;
+    color: $primary;
+    
+    &:hover {
+      background-color: darken-color($secondary, 10%);
+    }
+  }
+}

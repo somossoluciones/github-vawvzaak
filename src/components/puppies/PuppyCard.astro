@@ -1,0 +1,37 @@
+---
+interface Props {
+  name: string;
+  age: string;
+  color: string;
+  gender: string;
+  image: string;
+  price: string;
+  available: boolean;
+}
+
+const { name, age, color, gender, image, price, available } = Astro.props;
+---
+
+<article class="puppy-card">
+  <div class="puppy-card__image">
+    <img src={image} alt={`Cachorro Dachshund ${color} - ${name}`} loading="lazy" />
+    {!available && <div class="puppy-card__badge">Reservado</div>}
+  </div>
+  <div class="puppy-card__content">
+    <h3>{name}</h3>
+    <ul class="puppy-card__details">
+      <li><strong>Edad:</strong> {age}</li>
+      <li><strong>Color:</strong> {color}</li>
+      <li><strong>Género:</strong> {gender}</li>
+      <li class="puppy-card__price"><strong>Precio:</strong> {price}</li>
+    </ul>
+    <a 
+      href={`https://wa.me/573001234567?text=Hola, estoy interesado en el cachorro ${name}`} 
+      class="puppy-card__button button button--primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Consultar Disponibilidad
+    </a>
+  </div>
+</article>

@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+.card {
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba($primary, 0.1);
+  padding: $spacing-6;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}

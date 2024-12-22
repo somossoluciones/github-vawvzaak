@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.testimonials {
+  @include container;
+  padding-top: $spacing-16;
+  padding-bottom: $spacing-16;
+  background-color: $gray-100;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-8;
+  }
+  
+  .carousel {
+    &__track {
+      gap: $spacing-4;
+      padding: $spacing-4;
+    }
+    
+    .card {
+      height: 100%;
+      text-align: center;
+      
+      p {
+        font-style: italic;
+        color: $gray-500;
+        margin-bottom: $spacing-4;
+      }
+      
+      cite {
+        font-weight: 600;
+        color: $primary;
+      }
+    }
+  }
+}

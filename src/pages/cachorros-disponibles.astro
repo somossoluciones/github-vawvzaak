@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PuppyGrid from '../components/puppies/PuppyGrid.astro';
+import Contact from '../components/Contact.astro';
+import WhatsAppButton from '../components/WhatsAppButton';
+import SocialSidebar from '../components/SocialSidebar';
+
+const seo = {
+  title: "Cachorros Dachshund Disponibles | StarDogs Colombia",
+  description: "Encuentra tu cachorro Dachshund ideal. Tenemos disponibles hermosos cachorros Dapple, Chocolate y Blue. Envíos a USA y toda Colombia. ¡Reserva ahora!"
+};
+---
+
+<Layout title={seo.title} description={seo.description}>
+  <Navbar />
+  <main class="puppies-page">
+    <section class="puppies-page__hero">
+      <h1>Cachorros Disponibles</h1>
+      <p>Encuentra tu compañero perfecto entre nuestros hermosos cachorros Dachshund, criados con amor y los más altos estándares de calidad</p>
+    </section>
+    
+    <section class="puppies-page__info">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Certificados</h3>
+          <p>Todos nuestros cachorros vienen con pedigree internacional y certificados de salud</p>
+        </div>
+        <div class="info-card">
+          <h3>Envíos Seguros</h3>
+          <p>Realizamos envíos seguros a Estados Unidos y toda Colombia con documentación completa</p>
+        </div>
+        <div class="info-card">
+          <h3>Garantía</h3>
+          <p>Ofrecemos garantía de salud y asesoría veterinaria post-venta</p>
+        </div>
+      </div>
+    </section>
+    
+    <PuppyGrid />
+    
+    <Contact />
+  </main>
+  <WhatsAppButton client:load />
+  <SocialSidebar client:load />
+</Layout>

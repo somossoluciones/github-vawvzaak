@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+
+.contact {
+  background-color: $gray-100;
+  padding: $spacing-16 0;
+
+  &__container {
+    @include container;
+    max-width: 600px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-2;
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: $gray-500;
+    margin-bottom: $spacing-8;
+  }
+
+  &__form {
+    background-color: $white;
+    padding: $spacing-8;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba($primary, 0.1);
+
+    .form-group {
+      margin-bottom: $spacing-4;
+
+      label {
+        display: block;
+        margin-bottom: $spacing-2;
+        font-weight: 500;
+        color: $primary;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: $spacing-3;
+        border: 1px solid $gray-200;
+        border-radius: 6px;
+        font-family: inherit;
+        font-size: $font-size-base;
+        transition: border-color 0.2s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $secondary;
+        }
+
+        &::placeholder {
+          color: $gray-400;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+    }
+  }
+}

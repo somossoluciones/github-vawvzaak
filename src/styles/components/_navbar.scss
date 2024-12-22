@@ -1,0 +1,101 @@
+@use '../abstracts' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-header;
+  background-color: rgba($white, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 0 rgba($primary, 0.1);
+  
+  &__container {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    
+    @include respond(md) {
+      height: 70px;
+    }
+  }
+  
+  &__logo {
+    font-weight: 700;
+    font-size: $font-size-lg;
+    color: $primary;
+    
+    @include respond(md) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    padding: $spacing-2;
+    color: $primary;
+    margin-left: auto;
+    
+    @include respond(md) {
+      display: none;
+    }
+  }
+  
+  &__menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    padding: $spacing-4 $spacing-2;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    
+    @include respond(md) {
+      top: 70px;
+      position: static;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      padding: 0;
+      background-color: transparent;
+    }
+    
+    &--active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+    
+    @include respond(md) {
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-6;
+    }
+    
+    a:not(.button) {
+      color: $primary;
+      font-weight: 500;
+      font-size: $font-size-base;
+      transition: color 0.2s ease;
+      
+      @include respond(md) {
+        font-size: $font-size-lg;
+      }
+      
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}

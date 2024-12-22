@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding-top: $spacing-16;
+  padding-bottom: $spacing-16;
+  
+  &__container {
+    @include container;
+  }
+}

@@ -1,0 +1,22 @@
+@use 'abstracts' as *;
+
+// Import all partials using @use
+@use 'base/reset';
+@use 'base/typography';
+
+// Components
+@use 'components/button';
+@use 'components/navbar';
+@use 'components/card';
+@use 'components/carousel';
+@use 'components/whatsapp-button';
+@use 'components/social-sidebar';
+
+// Layout
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/puppies';
+@use 'layout/gallery';
+@use 'layout/testimonials';
+@use 'layout/contact';
+@use 'layout/footer';

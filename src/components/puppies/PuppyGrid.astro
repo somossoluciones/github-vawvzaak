@@ -1,0 +1,59 @@
+---
+import PuppyCard from './PuppyCard.astro';
+
+const puppies = [
+  {
+    name: "Zeus",
+    age: "10 semanas",
+    color: "Blue Dapple",
+    gender: "Macho",
+    image: "https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?w=400&h=300&fit=crop",
+    price: "USD 2,500",
+    available: true
+  },
+  {
+    name: "Luna",
+    age: "9 semanas",
+    color: "Chocolate Dapple",
+    gender: "Hembra",
+    image: "https://images.unsplash.com/photo-1647891940243-77a6483a152e?w=400&h=300&fit=crop",
+    price: "USD 2,800",
+    available: true
+  },
+  {
+    name: "Rocky",
+    age: "8 semanas",
+    color: "Dapple",
+    gender: "Macho",
+    image: "https://images.unsplash.com/photo-1519098901909-b1553a1190af?w=400&h=300&fit=crop",
+    price: "USD 2,500",
+    available: true
+  },
+  {
+    name: "Bella",
+    age: "11 semanas",
+    color: "Black & Tan",
+    gender: "Hembra",
+    image: "https://images.unsplash.com/photo-1612195583950-b8fd34c87093?w=400&h=300&fit=crop",
+    price: "USD 2,300",
+    available: true
+  },
+  {
+    name: "Max",
+    age: "8 semanas",
+    color: "Red",
+    gender: "Macho",
+    image: "https://images.unsplash.com/photo-1548658166-136d9f6a7e76?w=400&h=300&fit=crop",
+    price: "USD 2,400",
+    available: false
+  }
+];
+---
+
+<section class="puppy-grid">
+  <div class="puppy-grid__container">
+    {puppies.map(puppy => (
+      <PuppyCard {...puppy} />
+    ))}
+  </div>
+</section>
